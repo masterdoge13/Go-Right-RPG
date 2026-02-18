@@ -1,7 +1,8 @@
 extends CharacterBody2D
 var attack_scene = preload("res://Assets/Player/Attack.tscn")
 @export var SPEED = 200
-@export var damage = 5
+@export var DAMAGE = 5
+@export var HEALTH = 500
 var can_dash = true
 var can_attack = true
 
@@ -22,7 +23,7 @@ func _process(_delta):
 		var pos = $"attack/attack spawn point".position
 		var attack = attack_scene.instantiate()
 		attack.global_position = pos
-		attack.damage = damage
+		attack.damage = DAMAGE
 		$attack.add_child(attack)
 
 
@@ -32,3 +33,6 @@ func _on_dash_timer_timeout() -> void:
 
 func _on_attack_cooldown_timeout() -> void:
 	can_attack = true
+	
+func  player_get_hit(damage):
+	HEALTH -= damage
