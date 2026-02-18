@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dg3607mshogbk"]
+
+[ext_resource type="Script" uid="uid://cv4xrqdtceoo" path="res://Assets/Scripts/test_enemy.gd" id="1_3ii28"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Sprites/Placeholders/icon.svg" id="2_dj3p1"]
+[ext_resource type="PackedScene" uid="uid://bueentxweefpn" path="res://Assets/Enemies/EnemyHitbox.tscn" id="3_5i8ds"]
+
+[node name="TestEnemy" type="Node2D" unique_id=884687865]
+script = ExtResource("1_3ii28")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1269834293]
+texture = ExtResource("2_dj3p1")
+
+[node name="EnemyHitbox" parent="." unique_id=911730056 instance=ExtResource("3_5i8ds")]
+scale = Vector2(3, 3)
+
+[connection signal="take_damage" from="EnemyHitbox" to="." method="_on_enemy_hitbox_take_damage"]

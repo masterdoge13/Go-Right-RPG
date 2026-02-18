@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var attack_scene = preload("res://Assets/Attack.tscn")
+var attack_scene = preload("res://Assets/Player/Attack.tscn")
 @export var SPEED = 200
 @export var damage = 5
 var can_dash = true
