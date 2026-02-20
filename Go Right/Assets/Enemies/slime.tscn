@@ -9,6 +9,7 @@
 radius = 14.035668
 
 [node name="Slime" type="CharacterBody2D" unique_id=1505249927]
+scale = Vector2(3, 3)
 script = ExtResource("1_t6mvr")
 
 [node name="EnemyHitbox" parent="." unique_id=911730056 instance=ExtResource("2_rci5r")]

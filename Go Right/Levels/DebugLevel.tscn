@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dg3607mshogbk" path="res://Assets/Enemies/TestEnemy.tscn" id="2_7ksiy"]
 [ext_resource type="PackedScene" uid="uid://0i0dulx43wn4" path="res://Assets/Enemies/slime.tscn" id="3_7ksiy"]
 [ext_resource type="PackedScene" uid="uid://bown7de04bwk8" path="res://Assets/Enemies/king_slime.tscn" id="4_aq0ab"]
+[ext_resource type="PackedScene" uid="uid://cuhn2ru3gmb36" path="res://Assets/Enemies/skeleton_basic.tscn" id="5_afn2h"]
+[ext_resource type="PackedScene" uid="uid://dbqexyq3gqd61" path="res://Assets/Enemies/lich.tscn" id="6_h4hu5"]
 
 [node name="Node2D" type="Node2D" unique_id=251769888]
 
@@ -14,6 +16,12 @@ position = Vector2(435, 275)
 position = Vector2(424, -8)
 
 [node name="Slime" parent="." unique_id=1312326678 instance=ExtResource("3_7ksiy")]
-scale = Vector2(3, 3)
 
 [node name="King Slime" parent="." unique_id=1505249927 instance=ExtResource("4_aq0ab")]
+position = Vector2(-478.99997, -26.999998)
+
+[node name="Skeleton Basic" parent="." unique_id=1435784216 instance=ExtResource("5_afn2h")]
+position = Vector2(-21, 470)
+
+[node name="Lich" parent="." unique_id=1704017116 instance=ExtResource("6_h4hu5")]
+position = Vector2(929.99994, 468.99997)
