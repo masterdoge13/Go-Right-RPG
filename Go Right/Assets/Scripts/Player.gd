@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var attack_scene = preload("res://Assets/Player/Attack.tscn")
-@export var SPEED = 200
+@export var SPEED = 2000
 @export var DAMAGE = 5
 @export var HEALTH = 500
 @export var MAXHEALTH = 500
@@ -14,7 +14,7 @@ func _process(_delta):
 	if can_dash:
 		if Input.is_action_pressed("dash") and can_dash == true:
 			can_dash = false
-			velocity = (get_global_mouse_position()-global_position).normalized()*SPEED*100
+			velocity = (get_global_mouse_position()-global_position).normalized()*SPEED*50
 			move_and_slide()
 			$"dash cooldown".start(1)
 			
