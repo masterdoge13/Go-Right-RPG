@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://vobj1j16eea2"]
+[gd_scene format=3 uid="uid://bsjot8lnda7ok"]
 
 [ext_resource type="PackedScene" uid="uid://d1mtaq5d0shi8" path="res://Assets/Player/Player.tscn" id="1_mowe0"]
 [ext_resource type="PackedScene" uid="uid://dg3607mshogbk" path="res://Assets/Enemies/TestEnemy.tscn" id="2_7ksiy"]
 [ext_resource type="PackedScene" uid="uid://0i0dulx43wn4" path="res://Assets/Enemies/slime.tscn" id="3_7ksiy"]
 [ext_resource type="PackedScene" uid="uid://bown7de04bwk8" path="res://Assets/Enemies/king_slime.tscn" id="4_aq0ab"]
 [ext_resource type="PackedScene" uid="uid://cuhn2ru3gmb36" path="res://Assets/Enemies/skeleton_basic.tscn" id="5_afn2h"]
-[ext_resource type="PackedScene" uid="uid://dbqexyq3gqd61" path="res://Assets/Enemies/lich.tscn" id="6_h4hu5"]
+[ext_resource type="PackedScene" path="res://Assets/Enemies/lich.tscn" id="6_h4hu5"]
 
 [node name="Node2D" type="Node2D" unique_id=251769888]
 
