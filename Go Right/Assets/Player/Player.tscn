@@ -35,6 +35,8 @@ wait_time = 0.2
 one_shot = true
 
 [node name="health regen cooldown" type="Timer" parent="." unique_id=1542246978]
+one_shot = true
 
 [connection signal="timeout" from="dash cooldown" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="attack cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="health regen cooldown" to="." method="_on_health_regen_cooldown_timeout"]

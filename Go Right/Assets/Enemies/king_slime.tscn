@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bown7de04bwk8"]
+
+[ext_resource type="Script" uid="uid://napci1jrxlkn" path="res://Assets/Scripts/king_slime.gd" id="1_ntwwq"]
+[ext_resource type="PackedScene" uid="uid://bueentxweefpn" path="res://Assets/Enemies/EnemyHitbox.tscn" id="2_5smhu"]
+[ext_resource type="Texture2D" uid="uid://cu1idw17s4ytw" path="res://Sprites/Placeholders/placeholder slime.png" id="3_2nd8j"]
+[ext_resource type="PackedScene" uid="uid://ck4mui74vmhd5" path="res://Assets/Enemies/enemy_hurtbox.tscn" id="4_853w3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t6mvr"]
+radius = 14.035668
+
+[node name="King Slime" type="CharacterBody2D" unique_id=1505249927]
+scale = Vector2(5, 5)
+script = ExtResource("1_ntwwq")
+
+[node name="EnemyHitbox" parent="." unique_id=911730056 instance=ExtResource("2_5smhu")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70752976]
+position = Vector2(0, 1)
+scale = Vector2(0.021664588, 0.028038798)
+texture = ExtResource("3_2nd8j")
+
+[node name="jump timer" type="Timer" parent="." unique_id=82713543]
+wait_time = 0.5
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=138651866]
+shape = SubResource("CircleShape2D_t6mvr")
+
+[node name="air time" type="Timer" parent="." unique_id=1548681623]
+wait_time = 0.1
+one_shot = true
+
+[node name="EnemyHurtbox" parent="." unique_id=2145302875 instance=ExtResource("4_853w3")]
+
+[connection signal="take_damage" from="EnemyHitbox" to="." method="_on_enemy_hitbox_take_damage"]
+[connection signal="timeout" from="jump timer" to="." method="_on_jump_timer_timeout"]
+[connection signal="timeout" from="air time" to="." method="_on_air_time_timeout"]

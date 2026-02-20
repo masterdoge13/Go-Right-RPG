@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ck4mui74vmhd5"]
+
+[ext_resource type="Script" uid="uid://bknjxwyjsr7y0" path="res://Assets/Scripts/enemy_hurtbox.gd" id="1_gptjl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_docry"]
+radius = 20.0
+
+[node name="EnemyHurtbox" type="Area2D" unique_id=2145302875]
+script = ExtResource("1_gptjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1784986569]
+shape = SubResource("CircleShape2D_docry")
+
+[node name="Hit Cooldown" type="Timer" parent="." unique_id=2090065925]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Hit Cooldown" to="." method="_on_hit_cooldown_timeout"]

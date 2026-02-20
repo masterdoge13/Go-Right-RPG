@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dcns12m4uerte" path="res://Assets/Scripts/enemyhitbox.gd" id="1_dtjcm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wvtu0"]
-radius = 22.090721
+radius = 20.0
 
 [node name="EnemyHitbox" type="Area2D" unique_id=1155655665]
 script = ExtResource("1_dtjcm")

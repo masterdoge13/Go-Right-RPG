@@ -1,7 +1,7 @@
 extends CharacterBody2D
-@export var HEALTH = 50
-@export var SPEED = 3000
-@export var DAMAGE = 10
+@export var HEALTH = 300
+@export var SPEED = 5000
+@export var DAMAGE = 30
 var direction: Vector2 = Vector2.DOWN
 var jump = false
 var target
@@ -15,7 +15,7 @@ func _process(_delta):
 		queue_free()
 	if jump:
 		direction = (target.global_position - global_position).normalized()
-		velocity = direction * SPEED 
+		velocity = round(direction * SPEED * randf_range(0.8, 1.2))
 		move_and_slide()
 	
 func _ready() -> void:

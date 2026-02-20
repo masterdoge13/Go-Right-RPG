@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://do58mixdtklrh" path="res://Assets/Scripts/slime.gd" id="1_t6mvr"]
 [ext_resource type="PackedScene" uid="uid://bueentxweefpn" path="res://Assets/Enemies/EnemyHitbox.tscn" id="2_rci5r"]
 [ext_resource type="Texture2D" uid="uid://cu1idw17s4ytw" path="res://Sprites/Placeholders/placeholder slime.png" id="3_pmt0u"]
+[ext_resource type="PackedScene" uid="uid://ck4mui74vmhd5" path="res://Assets/Enemies/enemy_hurtbox.tscn" id="4_rci5r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t6mvr"]
 radius = 14.035668
@@ -27,6 +28,8 @@ shape = SubResource("CircleShape2D_t6mvr")
 [node name="air time" type="Timer" parent="." unique_id=1548681623]
 wait_time = 0.1
 one_shot = true
+
+[node name="EnemyHurtbox" parent="." unique_id=2145302875 instance=ExtResource("4_rci5r")]
 
 [connection signal="take_damage" from="EnemyHitbox" to="." method="_on_enemy_hitbox_take_damage"]
 [connection signal="timeout" from="jump timer" to="." method="_on_jump_timer_timeout"]

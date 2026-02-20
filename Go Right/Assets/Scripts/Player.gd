@@ -3,6 +3,7 @@ var attack_scene = preload("res://Assets/Player/Attack.tscn")
 @export var SPEED = 200
 @export var DAMAGE = 5
 @export var HEALTH = 500
+@export var MAXHEALTH = 500
 var can_dash = true
 var can_attack = true
 
@@ -34,5 +35,20 @@ func _on_dash_timer_timeout() -> void:
 func _on_attack_cooldown_timeout() -> void:
 	can_attack = true
 	
-func  player_get_hit(damage):
+func  player_hit(damage):
 	HEALTH -= damage
+	print(HEALTH)
+	$"health regen cooldown".start(10)
+	
+
+func _on_health_regen_cooldown_timeout() -> void:
+	HEALTH += 50
+	print("HEALTH healed")
+	
+	if HEALTH >= MAXHEALTH:
+		HEALTH = MAXHEALTH
+		print(HEALTH)
+	else:
+		$"health regen cooldown".start(10)
+		print(HEALTH)
+	
