@@ -4,10 +4,13 @@ var attack_scene = preload("res://Assets/Player/Attack.tscn")
 @export var DAMAGE = 5
 @export var HEALTH = 500
 @export var MAXHEALTH = 500
+signal gameover()
 var can_dash = true
 var can_attack = true
 
 func _process(_delta):
+	if HEALTH <= 0:
+		gameover.emit()
 	var direction = Input.get_vector("left", "right", "up","down")
 	velocity = direction*SPEED
 	move_and_slide()
