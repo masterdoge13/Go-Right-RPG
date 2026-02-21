@@ -18,7 +18,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8ol0e")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmvop"]
-size = Vector2(10122.002, 5126.534)
+size = Vector2(13658.003, 5126.534)
 
 [node name="World" type="Node2D" unique_id=1410063204]
 
@@ -32,7 +32,7 @@ layer_0/tile_data = PackedInt32Array(-983040, 0, 0, -917504, 0, 0, -983039, 0, 0
 script = ExtResource("2_m3j4o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SlimeArea" unique_id=1883291142]
-position = Vector2(440.00012, -106.73349)
+position = Vector2(-1328, -106.73349)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_hmvop")
 
@@ -103,7 +103,7 @@ position = Vector2(3335, 20)
 position = Vector2(2123, 1148)
 
 [node name="Player" parent="." unique_id=925519112 instance=ExtResource("2_8ol0e")]
-position = Vector2(-5884, 0)
+position = Vector2(-8829, 0)
 SPEED = 4000
 
 [connection signal="body_entered" from="SlimeArea" to="SlimeArea" method="_on_body_entered"]

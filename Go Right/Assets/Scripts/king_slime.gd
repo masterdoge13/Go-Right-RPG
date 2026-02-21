@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@export var HEALTH = 50
+@export var HEALTH = 300
 @export var SPEED = 5000
 @export var DAMAGE = 30
 var direction: Vector2 = Vector2.DOWN
