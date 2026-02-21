@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://wvvj08e7spv7"]
+
+[ext_resource type="Script" uid="uid://i0us8okced1k" path="res://Assets/Scripts/golem_beam.gd" id="1_ji5rk"]
+[ext_resource type="Texture2D" uid="uid://856ytonvm7ir" path="res://Sprites/Enemies/golem_projectile_beginning.png" id="2_enfne"]
+[ext_resource type="Texture2D" uid="uid://1s0nvunla8cr" path="res://Sprites/Enemies/golem_projectile_continue.png" id="3_xqye6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bj5a3"]
+size = Vector2(1109, 99)
+
+[node name="Node2D" type="Area2D" unique_id=2052853679]
+scale = Vector2(2, 2)
+script = ExtResource("1_ji5rk")
+
+[node name="beam start" type="Sprite2D" parent="." unique_id=277097537]
+position = Vector2(42.03517, 0.0031441716)
+rotation = 3.1415927
+scale = Vector2(0.25873834, 0.99985725)
+texture = ExtResource("2_enfne")
+
+[node name="beam continue" type="Sprite2D" parent="." unique_id=1023986342]
+position = Vector2(601.5, 0)
+scale = Vector2(2.5, 1)
+texture = ExtResource("3_xqye6")
+
+[node name="lifetime" type="Timer" parent="." unique_id=1229199189]
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=655838621]
+position = Vector2(554.5, 0.5)
+shape = SubResource("RectangleShape2D_bj5a3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]

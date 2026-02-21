@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bown7de04bwk8" path="res://Assets/Enemies/king_slime.tscn" id="4_aq0ab"]
 [ext_resource type="PackedScene" uid="uid://cuhn2ru3gmb36" path="res://Assets/Enemies/skeleton_basic.tscn" id="5_afn2h"]
 [ext_resource type="PackedScene" uid="uid://dbqexyq3gqd61" path="res://Assets/Enemies/lich.tscn" id="6_h4hu5"]
+[ext_resource type="PackedScene" uid="uid://ckimvy8cr8ji3" path="res://Assets/Enemies/golem.tscn" id="7_pjo1w"]
 
 [node name="Node2D" type="Node2D" unique_id=251769888]
 
@@ -25,3 +26,7 @@ position = Vector2(-21, 470)
 
 [node name="Lich" parent="." unique_id=1704017116 instance=ExtResource("6_h4hu5")]
 position = Vector2(929.99994, 468.99997)
+
+[node name="Golem" parent="." unique_id=583905920 instance=ExtResource("7_pjo1w")]
+position = Vector2(3437.9998, 2684)
+scale = Vector2(20, 20)

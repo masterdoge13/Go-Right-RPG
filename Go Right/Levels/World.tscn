@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bm7n84nrik378" path="res://Sprites/Terrain/Tree_V2.png" id="1_u3tya"]
 [ext_resource type="PackedScene" uid="uid://d1mtaq5d0shi8" path="res://Assets/Player/Player.tscn" id="2_8ol0e"]
-[ext_resource type="Script" uid="uid://ch4cyutvm0bg2" path="res://Levels/slime_area.gd" id="2_m3j4o"]
+[ext_resource type="Script" uid="uid://ch4cyutvm0bg2" path="res://Assets/Scripts/slime_area.gd" id="2_m3j4o"]
 [ext_resource type="PackedScene" uid="uid://0i0dulx43wn4" path="res://Assets/Enemies/slime.tscn" id="3_j5go0"]
 [ext_resource type="PackedScene" uid="uid://bown7de04bwk8" path="res://Assets/Enemies/king_slime.tscn" id="4_53g8k"]
 
@@ -104,6 +104,5 @@ position = Vector2(2123, 1148)
 
 [node name="Player" parent="." unique_id=925519112 instance=ExtResource("2_8ol0e")]
 position = Vector2(-8829, 0)
-SPEED = 4000
 
 [connection signal="body_entered" from="SlimeArea" to="SlimeArea" method="_on_body_entered"]

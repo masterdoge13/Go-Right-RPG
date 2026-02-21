@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ckimvy8cr8ji3"]
+
+[ext_resource type="Script" uid="uid://cv7bfxe4baxhu" path="res://Assets/Scripts/golem.gd" id="1_ytc6f"]
+[ext_resource type="PackedScene" uid="uid://bueentxweefpn" path="res://Assets/Enemies/EnemyHitbox.tscn" id="2_iwykg"]
+[ext_resource type="Texture2D" uid="uid://dbl8vgmpdfqhq" path="res://Sprites/Placeholders/golem.png" id="3_hxs0j"]
+[ext_resource type="Script" uid="uid://ct8k7wb6i1nch" path="res://Assets/Scripts/golem_aim.gd" id="4_leox4"]
+[ext_resource type="Texture2D" uid="uid://ceqgvy8v5xnk1" path="res://Sprites/Enemies/golem projectile warning.png" id="5_iwykg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gd3kk"]
+
+[node name="Golem" type="CharacterBody2D" unique_id=583905920]
+script = ExtResource("1_ytc6f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=899123392]
+shape = SubResource("CircleShape2D_gd3kk")
+
+[node name="EnemyHitbox" parent="." unique_id=1155655665 instance=ExtResource("2_iwykg")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1752705538]
+position = Vector2(-5.9604645e-08, 1.1920929e-07)
+scale = Vector2(0.019243421, 0.019597786)
+texture = ExtResource("3_hxs0j")
+
+[node name="Laser Cooldown" type="Timer" parent="." unique_id=625270987]
+one_shot = true
+
+[node name="Laser Charge" type="Timer" parent="." unique_id=439337242]
+one_shot = true
+
+[node name="Cooldown Period" type="Timer" parent="." unique_id=2103656434]
+one_shot = true
+
+[node name="attack rotation axis" type="Node2D" parent="." unique_id=1993927725]
+script = ExtResource("4_leox4")
+
+[node name="attack spawn" type="Node2D" parent="attack rotation axis" unique_id=1125061403]
+position = Vector2(20, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="attack rotation axis/attack spawn" unique_id=1818041041]
+visible = false
+position = Vector2(1119.5, 0)
+scale = Vector2(0.27962497, 0.334)
+texture = ExtResource("5_iwykg")
+
+[connection signal="take_damage" from="EnemyHitbox" to="." method="_on_enemy_hitbox_take_damage"]
+[connection signal="timeout" from="Laser Cooldown" to="." method="_on_laser_cooldown_timeout"]
+[connection signal="timeout" from="Laser Charge" to="." method="_on_laser_charge_timeout"]
+[connection signal="timeout" from="Cooldown Period" to="." method="_on_cooldown_period_timeout"]

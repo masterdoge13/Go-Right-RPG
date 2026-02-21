@@ -15,8 +15,8 @@ script = ExtResource("1_t6mvr")
 [node name="EnemyHitbox" parent="." unique_id=911730056 instance=ExtResource("2_rci5r")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=70752976]
-position = Vector2(0, 1)
-scale = Vector2(5, 5)
+position = Vector2(-4.3333335, -17.333344)
+scale = Vector2(4, 4)
 texture = ExtResource("3_rci5r")
 
 [node name="jump timer" type="Timer" parent="." unique_id=82713543]
