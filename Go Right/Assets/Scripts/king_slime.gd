@@ -1,11 +1,12 @@
 extends CharacterBody2D
-@export var HEALTH = 300
+@export var HEALTH = 50
 @export var SPEED = 5000
 @export var DAMAGE = 30
 var direction: Vector2 = Vector2.DOWN
 var jump = false
 var target
 var baby_slimes = preload("res://Assets/Enemies/slime.tscn")
+var aggro_bool = false
 
 func _on_enemy_hitbox_take_damage(damage: Variant) -> void:
 	HEALTH -= damage
@@ -19,6 +20,7 @@ func _process(_delta):
 			baby_slime.global_position.y = self.global_position.y + randi_range(-20, 21)
 			baby_slime.scale = Vector2(3, 3)
 			get_parent().add_child(baby_slime)
+			baby_slime.aggro(target)
 		queue_free()
 		
 	if jump:
@@ -40,4 +42,6 @@ func _on_air_time_timeout() -> void:
 	
 func aggro(body):
 	target = body
-	$"jump timer".start(randf_range(0.5,1))
+	if (aggro_bool == false):
+		$"jump timer".start(randf_range(0.5,1))
+		aggro_bool = true

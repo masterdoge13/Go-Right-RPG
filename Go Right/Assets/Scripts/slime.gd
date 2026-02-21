@@ -5,6 +5,7 @@ extends CharacterBody2D
 var direction: Vector2 = Vector2.DOWN
 var jump = false
 var target
+var aggro_bool = false
 
 func _on_enemy_hitbox_take_damage(damage: Variant) -> void:
 	HEALTH -= damage
@@ -32,4 +33,6 @@ func _on_air_time_timeout() -> void:
 	
 func aggro(body):
 	target = body
-	$"jump timer".start(randf_range(0.5,1))
+	if (aggro_bool == false):
+		$"jump timer".start(randf_range(0.5,1))
+		aggro_bool = true

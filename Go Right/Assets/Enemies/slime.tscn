@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://do58mixdtklrh" path="res://Assets/Scripts/slime.gd" id="1_t6mvr"]
 [ext_resource type="PackedScene" uid="uid://bueentxweefpn" path="res://Assets/Enemies/EnemyHitbox.tscn" id="2_rci5r"]
-[ext_resource type="Texture2D" uid="uid://cu1idw17s4ytw" path="res://Sprites/Placeholders/placeholder slime.png" id="3_pmt0u"]
+[ext_resource type="Texture2D" uid="uid://cq67jk0v6w3mj" path="res://Sprites/Enemies/Slime.png" id="3_rci5r"]
 [ext_resource type="PackedScene" uid="uid://ck4mui74vmhd5" path="res://Assets/Enemies/enemy_hurtbox.tscn" id="4_rci5r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t6mvr"]
@@ -16,8 +16,8 @@ script = ExtResource("1_t6mvr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=70752976]
 position = Vector2(0, 1)
-scale = Vector2(0.021664588, 0.028038798)
-texture = ExtResource("3_pmt0u")
+scale = Vector2(5, 5)
+texture = ExtResource("3_rci5r")
 
 [node name="jump timer" type="Timer" parent="." unique_id=82713543]
 wait_time = 0.5

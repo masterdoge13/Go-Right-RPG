@@ -19,8 +19,9 @@ func _ready() -> void:
 
 
 func aggro(body):
-	target = body
-	aggro_bool = true
+	if (aggro_bool == false):
+		target = body
+		aggro_bool = true
 
 
 func _on_enemy_hitbox_take_damage(damage: Variant) -> void:

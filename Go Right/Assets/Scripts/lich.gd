@@ -30,13 +30,14 @@ func _ready() -> void:
 
 func aggro(body):
 	target = body
+	if (aggro_bool == false):
+		$"Skeleton Spawn Timer".start(1)
 	aggro_bool = true
-	$"Skeleton Spawn Timer".start(1)
 
 
 func _on_skeleton_spawn_timer_timeout() -> void:
-	$"Skeleton Spawn Timer".start(10)
-	for i in range(0, randi_range(1,3)):
+	$"Skeleton Spawn Timer".start(5)
+	for i in range(0, randi_range(2,4)):
 		var skeleton = skele_scene.instantiate()
 		skeleton.global_position = global_position+(Vector2(randf_range(-1,1),randf_range(-1,1)).normalized()*100)
 		skeleton.aggro(target)
