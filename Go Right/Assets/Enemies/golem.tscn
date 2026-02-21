@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cv7bfxe4baxhu" path="res://Assets/Scripts/golem.gd" id="1_ytc6f"]
 [ext_resource type="PackedScene" uid="uid://bueentxweefpn" path="res://Assets/Enemies/EnemyHitbox.tscn" id="2_iwykg"]
-[ext_resource type="Texture2D" uid="uid://dbl8vgmpdfqhq" path="res://Sprites/Placeholders/golem.png" id="3_hxs0j"]
+[ext_resource type="Texture2D" uid="uid://cv0qa2h3awlhi" path="res://Sprites/Enemies/Golem_sprite.png" id="3_iwykg"]
 [ext_resource type="Script" uid="uid://ct8k7wb6i1nch" path="res://Assets/Scripts/golem_aim.gd" id="4_leox4"]
 [ext_resource type="Texture2D" uid="uid://ceqgvy8v5xnk1" path="res://Sprites/Enemies/golem projectile warning.png" id="5_iwykg"]
 
@@ -17,9 +17,9 @@ shape = SubResource("CircleShape2D_gd3kk")
 [node name="EnemyHitbox" parent="." unique_id=1155655665 instance=ExtResource("2_iwykg")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1752705538]
-position = Vector2(-5.9604645e-08, 1.1920929e-07)
-scale = Vector2(0.019243421, 0.019597786)
-texture = ExtResource("3_hxs0j")
+position = Vector2(4, -1)
+scale = Vector2(1.6, 1.5)
+texture = ExtResource("3_iwykg")
 
 [node name="Laser Cooldown" type="Timer" parent="." unique_id=625270987]
 one_shot = true

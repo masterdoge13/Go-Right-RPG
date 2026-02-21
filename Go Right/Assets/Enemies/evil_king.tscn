@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bwiwxmb7a5hup"]
+
+[ext_resource type="Script" uid="uid://detpo166lqmxt" path="res://Assets/Scripts/evil_king.gd" id="1_662kd"]
+[ext_resource type="PackedScene" uid="uid://bueentxweefpn" path="res://Assets/Enemies/EnemyHitbox.tscn" id="2_cqaoj"]
+[ext_resource type="Texture2D" uid="uid://dmunalclg7vy3" path="res://Sprites/Enemies/King_Sprite.png" id="3_cqaoj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hgajt"]
+
+[node name="Evil King" type="CharacterBody2D" unique_id=1403902786]
+scale = Vector2(4, 4)
+script = ExtResource("1_662kd")
+
+[node name="EnemyHitbox" parent="." unique_id=1155655665 instance=ExtResource("2_cqaoj")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=309227817]
+shape = SubResource("CircleShape2D_hgajt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1586077029]
+position = Vector2(-1, -9.536743e-07)
+scale = Vector2(3.2499998, 2.5)
+texture = ExtResource("3_cqaoj")
+
+[connection signal="take_damage" from="EnemyHitbox" to="." method="_on_enemy_hitbox_take_damage"]
