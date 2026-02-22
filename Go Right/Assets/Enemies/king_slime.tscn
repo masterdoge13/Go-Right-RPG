@@ -9,14 +9,14 @@
 radius = 14.035668
 
 [node name="King Slime" type="CharacterBody2D" unique_id=1505249927]
-scale = Vector2(5, 5)
+scale = Vector2(10, 10)
 script = ExtResource("1_ntwwq")
 
 [node name="EnemyHitbox" parent="." unique_id=911730056 instance=ExtResource("2_5smhu")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=70752976]
-position = Vector2(0, 1)
-scale = Vector2(5, 5)
+position = Vector2(0, -7.4000015)
+scale = Vector2(3, 3)
 texture = ExtResource("3_ntwwq")
 
 [node name="jump timer" type="Timer" parent="." unique_id=82713543]

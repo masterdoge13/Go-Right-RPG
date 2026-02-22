@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://bo1ssv5v555cw"]
 
 [ext_resource type="Script" uid="uid://cgyv1o8eontki" path="res://Assets/Scripts/slash.gd" id="1_r8l8h"]
-[ext_resource type="Texture2D" uid="uid://c018vlr2i3lp8" path="res://Sprites/Placeholders/Untitled.png" id="2_u2e8i"]
+[ext_resource type="Texture2D" uid="uid://nnii5meowjxv" path="res://Sprites/Player/slash_sprite.png" id="2_6a2fj"]
 
 [node name="Area2D" type="Area2D" unique_id=1984970579]
 script = ExtResource("1_r8l8h")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1098519598]
 position = Vector2(-389, 0)
-polygon = PackedVector2Array(284, -318, 796, -200, 760, 116, 339, 302, 399, 0)
+polygon = PackedVector2Array(324, -328, 898, -210, 951, 236, 326, 322, 377, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1799551062]
-position = Vector2(127, -15.000122)
-scale = Vector2(0.2585651, 0.36142102)
-texture = ExtResource("2_u2e8i")
+position = Vector2(217, -4.4999514)
+scale = Vector2(31.444448, 32.45)
+texture = ExtResource("2_6a2fj")
 
 [node name="lifetime" type="Timer" parent="." unique_id=570819699]
 one_shot = true

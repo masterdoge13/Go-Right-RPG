@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1mtaq5d0shi8"]
 
 [ext_resource type="Script" uid="uid://cjw6sp1vbpjku" path="res://Assets/Scripts/Player.gd" id="1_ify7s"]
-[ext_resource type="Texture2D" uid="uid://dipb1fotsn8pl" path="res://Sprites/Placeholders/birbredlowerres.jpg" id="2_l8qxc"]
+[ext_resource type="Texture2D" uid="uid://b73nc5k41yn6s" path="res://Sprites/Player/Knight_sprite.png" id="2_mwgys"]
 [ext_resource type="Script" uid="uid://dysw2rikql5xs" path="res://Assets/Scripts/attack.gd" id="3_l8qxc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ng366"]
@@ -9,13 +9,14 @@ radius = 128.19127
 
 [node name="Player" type="CharacterBody2D" unique_id=925519112]
 script = ExtResource("1_ify7s")
-SPEED = 2000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=960508029]
 shape = SubResource("CircleShape2D_ng366")
 
 [node name="AnimatedSprite2D" type="Sprite2D" parent="." unique_id=1719138846]
-texture = ExtResource("2_l8qxc")
+position = Vector2(20, 0)
+scale = Vector2(18, 18)
+texture = ExtResource("2_mwgys")
 
 [node name="attack" type="Node2D" parent="." unique_id=475102304]
 script = ExtResource("3_l8qxc")
