@@ -1,8 +1,6 @@
 extends Area2D
 
 
-
-
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("player_hit"):
-		$slimes.propagate_call("aggro", [body])
+		$liches.propagate_call("aggro", [body])
