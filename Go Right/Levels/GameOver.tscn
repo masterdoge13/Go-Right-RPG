@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://djn4w1kqgj2cd"]
+
+[ext_resource type="Script" uid="uid://dl7ijeoqelmry" path="res://Assets/Scripts/game_over.gd" id="1_jdanw"]
+[ext_resource type="Texture2D" uid="uid://duku5pvi81qjd" path="res://Sprites/Terrain/Play Again button.png" id="1_l8e1j"]
+[ext_resource type="Texture2D" uid="uid://kbs5djv6bcil" path="res://Sprites/Terrain/Game Over.png" id="1_m8yab"]
+
+[node name="Node2D" type="Node2D" unique_id=1029989381]
+script = ExtResource("1_jdanw")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1402085043]
+z_index = 10
+offset_left = 164.0
+offset_top = -99.0
+offset_right = 477.0
+offset_bottom = 79.0
+texture_normal = ExtResource("1_l8e1j")
+texture_pressed = ExtResource("1_l8e1j")
+texture_hover = ExtResource("1_l8e1j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1928964025]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_m8yab")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=681590124]
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
