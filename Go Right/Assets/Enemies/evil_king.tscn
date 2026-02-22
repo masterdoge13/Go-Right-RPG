@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hgajt"]
 
 [node name="Evil King" type="CharacterBody2D" unique_id=1403902786]
-scale = Vector2(4, 4)
+scale = Vector2(10, 10)
 script = ExtResource("1_662kd")
 
 [node name="EnemyHitbox" parent="." unique_id=1155655665 instance=ExtResource("2_cqaoj")]
