@@ -103,10 +103,5 @@ position = Vector2(2123, 1148)
 
 [node name="Player" parent="." unique_id=925519112 instance=ExtResource("2_8ol0e")]
 position = Vector2(-8829, 0)
-<<<<<<< HEAD
-scale = Vector2(10, 10)
-SPEED = 4000
-=======
->>>>>>> bcedc48163792a33d4874990b0aff039ab8f7418
 
 [connection signal="body_entered" from="SlimeArea" to="SlimeArea" method="_on_body_entered"]
