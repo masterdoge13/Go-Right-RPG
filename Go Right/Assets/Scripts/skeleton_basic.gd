@@ -7,7 +7,7 @@ var aggro_bool = false
 var target
 
 func _process(_delta):
-	if HEALTH == 0:
+	if HEALTH <= 0:
 		queue_free()
 	if aggro_bool:
 		direction = (target.global_position - global_position).normalized()

@@ -12,7 +12,7 @@ func _on_enemy_hitbox_take_damage(damage: Variant) -> void:
 
 
 func _process(_delta):
-	if HEALTH == 0:
+	if HEALTH <= 0:
 		queue_free()
 	if jump:
 		direction = (target.global_position - global_position).normalized()

@@ -12,7 +12,7 @@ func _on_enemy_hitbox_take_damage(damage: Variant) -> void:
 	HEALTH -= damage
 
 func _process(_delta):
-	if HEALTH == 0:
+	if HEALTH <= 0:
 		queue_free()
 	if aggro_bool:
 		distance = global_position.distance_to(target.global_position)
