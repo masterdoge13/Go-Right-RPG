@@ -278,6 +278,7 @@ texture = ExtResource("23_piqde")
 [connection signal="gameover" from="Player" to="." method="_on_player_gameover"]
 [connection signal="body_entered" from="SlimeArea" to="SlimeArea" method="_on_body_entered"]
 [connection signal="finished" from="Main Theme" to="." method="_on_main_theme_finished"]
+[connection signal="finished" from="Golem Theme" to="." method="_on_golem_theme_finished"]
 [connection signal="body_entered" from="LichArea" to="LichArea" method="_on_body_entered"]
 [connection signal="body_entered" from="GolemArea" to="." method="_on_golem_area_body_entered"]
 [connection signal="body_entered" from="GolemArea" to="GolemArea" method="_on_body_entered"]

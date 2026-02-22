@@ -26,3 +26,7 @@ func _on_golem_deafeated() -> void:
 
 func _on_player_gameover() -> void:
 	get_tree().change_scene_to_file("res://Levels/GameOver.tscn")
+
+
+func _on_golem_theme_finished() -> void:
+	$"Golem Theme".play()
