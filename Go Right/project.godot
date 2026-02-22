@@ -15,6 +15,10 @@ run/main_scene="uid://d2cwx7qfqrg50"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Sprites/Placeholders/icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 up={
