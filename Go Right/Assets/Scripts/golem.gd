@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @export var HEALTH: int = 500
 @export var MAXHEALTH: float = 500
-@export var SPEED = 700
+@export var SPEED = 1200
 @export var DAMAGE = 200
 @export var STAY_DISTANCE = 2000
 var attack_scene = preload("res://Assets/Enemies/golem_beam.tscn")
