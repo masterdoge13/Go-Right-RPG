@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ovlg3lxrngnw"
+path="res://.godot/imported/Go Right Main Theme.wav-7af853e71e4567fa1e765dc1fb93e511.sample"
+
+[deps]
+
+source_file="res://Assets/Music/Go Right Main Theme.wav"
+dest_files=["res://.godot/imported/Go Right Main Theme.wav-7af853e71e4567fa1e765dc1fb93e511.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
