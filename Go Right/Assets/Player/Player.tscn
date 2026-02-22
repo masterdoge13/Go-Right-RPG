@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cjw6sp1vbpjku" path="res://Assets/Scripts/Player.gd" id="1_ify7s"]
 [ext_resource type="Texture2D" uid="uid://b73nc5k41yn6s" path="res://Sprites/Player/Knight_sprite.png" id="2_mwgys"]
 [ext_resource type="Script" uid="uid://dysw2rikql5xs" path="res://Assets/Scripts/attack.gd" id="3_l8qxc"]
+[ext_resource type="Script" uid="uid://mek8h5lrk7op" path="res://Assets/Scripts/health_bar.gd" id="4_ftc6t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ng366"]
 radius = 128.19127
@@ -24,10 +25,6 @@ script = ExtResource("3_l8qxc")
 [node name="attack spawn point" type="Node2D" parent="attack" unique_id=1390321306]
 position = Vector2(170, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1856750500]
-zoom = Vector2(0.2, 0.2)
-position_smoothing_enabled = true
-
 [node name="dash cooldown" type="Timer" parent="." unique_id=1626746897]
 one_shot = true
 
@@ -37,6 +34,21 @@ one_shot = true
 
 [node name="health regen cooldown" type="Timer" parent="." unique_id=1542246978]
 one_shot = true
+
+[node name="Health bar" type="ProgressBar" parent="." unique_id=1745271556]
+modulate = Color(1, 0, 0, 1)
+offset_left = -132.0
+offset_top = -176.0
+offset_right = 132.0
+offset_bottom = -149.0
+show_percentage = false
+script = ExtResource("4_ftc6t")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1058311749]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1856750500]
+zoom = Vector2(0.2, 0.2)
+position_smoothing_enabled = true
 
 [connection signal="timeout" from="dash cooldown" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="attack cooldown" to="." method="_on_attack_cooldown_timeout"]

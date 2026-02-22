@@ -9,8 +9,9 @@ func aggro(body):
 		aggro_bool = true
 
 func _on_enemy_hitbox_take_damage(damage: Variant) -> void:
-	direction = (global_position - target.global_position).normalized()
-	SPEED = 2000
+	if target != null:
+		direction = (global_position - target.global_position).normalized()
+		SPEED = 2000
 	
 
 func _process(delta: float) -> void:
