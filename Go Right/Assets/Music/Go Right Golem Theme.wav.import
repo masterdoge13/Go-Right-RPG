@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://babhm2vpqc73s"
+path="res://.godot/imported/Go Right Golem Theme.wav-061acbb6efad2f1d04f19948dc30692d.sample"
+
+[deps]
+
+source_file="res://Assets/Music/Go Right Golem Theme.wav"
+dest_files=["res://.godot/imported/Go Right Golem Theme.wav-061acbb6efad2f1d04f19948dc30692d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

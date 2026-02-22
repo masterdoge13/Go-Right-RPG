@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://0i0dulx43wn4" path="res://Assets/Enemies/slime.tscn" id="3_j5go0"]
 [ext_resource type="PackedScene" uid="uid://bown7de04bwk8" path="res://Assets/Enemies/king_slime.tscn" id="4_53g8k"]
 [ext_resource type="AudioStream" uid="uid://ovlg3lxrngnw" path="res://Assets/Music/Go Right Main Theme.wav" id="6_53g8k"]
+[ext_resource type="AudioStream" uid="uid://babhm2vpqc73s" path="res://Assets/Music/Go Right Golem Theme.wav" id="8_iyc8y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ol0e"]
 texture = ExtResource("1_u3tya")
@@ -110,6 +111,9 @@ position = Vector2(-8829, 0)
 [node name="Main Theme" type="AudioStreamPlayer" parent="." unique_id=784807487]
 stream = ExtResource("6_53g8k")
 autoplay = true
+
+[node name="Golem Theme" type="AudioStreamPlayer" parent="." unique_id=678294570]
+stream = ExtResource("8_iyc8y")
 
 [connection signal="body_entered" from="SlimeArea" to="SlimeArea" method="_on_body_entered"]
 [connection signal="finished" from="Main Theme" to="." method="_on_main_theme_finished"]
