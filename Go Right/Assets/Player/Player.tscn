@@ -25,10 +25,6 @@ script = ExtResource("3_l8qxc")
 [node name="attack spawn point" type="Node2D" parent="attack" unique_id=1390321306]
 position = Vector2(170, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1856750500]
-zoom = Vector2(0.2, 0.2)
-position_smoothing_enabled = true
-
 [node name="dash cooldown" type="Timer" parent="." unique_id=1626746897]
 one_shot = true
 
@@ -47,6 +43,12 @@ offset_right = 132.0
 offset_bottom = -149.0
 show_percentage = false
 script = ExtResource("4_ftc6t")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1058311749]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1856750500]
+zoom = Vector2(0.2, 0.2)
+position_smoothing_enabled = true
 
 [connection signal="timeout" from="dash cooldown" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="attack cooldown" to="." method="_on_attack_cooldown_timeout"]

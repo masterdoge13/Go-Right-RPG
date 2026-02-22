@@ -20,6 +20,7 @@ func _on_golem_deafeated() -> void:
 	boss_defeated = true
 	$"Golem Theme".stop()
 	$"Main Theme".play()
+	get_tree().change_scene_to_file("res://Levels/victory_screen.tscn")
 	
 
 

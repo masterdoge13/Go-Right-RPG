@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Go Right"
-run/main_scene="uid://nnxjvcu3dqeh"
+run/main_scene="uid://d2cwx7qfqrg50"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Sprites/Placeholders/icon.svg"
 
