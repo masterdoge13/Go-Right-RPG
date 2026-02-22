@@ -49,7 +49,7 @@ position = Vector2(-30801, -47)
 [node name="Grass" type="Sprite2D" parent="." unique_id=1420654978]
 z_index = -4096
 texture_repeat = 2
-position = Vector2(65.99999, 0)
+position = Vector2(-20670, 1.7347235e-18)
 scale = Vector2(5, 5)
 texture = ExtResource("3_3y1xx")
 region_enabled = true
