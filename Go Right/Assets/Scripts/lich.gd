@@ -39,7 +39,7 @@ func _on_skeleton_spawn_timer_timeout() -> void:
 	$"Skeleton Spawn Timer".start(5)
 	for i in range(0, randi_range(2,4)):
 		var skeleton = skele_scene.instantiate()
-		skeleton.global_position = global_position+(Vector2(randf_range(-1,1),randf_range(-1,1)).normalized()*100)
+		skeleton.global_position = global_position+(Vector2(randf_range(-1,1),randf_range(-1,1)).normalized()*100) - get_parent().global_position
 		skeleton.aggro(target)
 		get_parent().add_child(skeleton)
 	

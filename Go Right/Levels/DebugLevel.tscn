@@ -25,12 +25,15 @@ position = Vector2(-478.99997, -26.999998)
 [node name="Skeleton Basic" parent="." unique_id=1435784216 instance=ExtResource("5_afn2h")]
 position = Vector2(-21, 470)
 
-[node name="Lich" parent="." unique_id=1704017116 instance=ExtResource("6_h4hu5")]
-position = Vector2(929.99994, 468.99997)
-
 [node name="Golem" parent="." unique_id=583905920 instance=ExtResource("7_pjo1w")]
 position = Vector2(3437.9998, 2684)
 scale = Vector2(20, 20)
 
 [node name="Evil King" parent="." unique_id=1403902786 instance=ExtResource("8_ih5ss")]
 position = Vector2(961, 733)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1142825189]
+position = Vector2(918, 51)
+
+[node name="Lich" parent="Node2D" unique_id=1704017116 instance=ExtResource("6_h4hu5")]
+position = Vector2(929.99994, 468.99997)
